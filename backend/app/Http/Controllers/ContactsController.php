@@ -29,7 +29,13 @@ class ContactsController extends Controller
      */
     public function show(string $id)
     {
-        return Contact::where("id", $id)->first();
+        $contact = Contact::where("id", $id)->first();
+
+        if (!$contact) {
+            return response()->json(['error' => 'Contact not found.'], 404);
+        }
+
+        return $contact;
     }
 
 

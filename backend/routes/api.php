@@ -19,4 +19,4 @@ use App\Http\Controllers\ContactsController;
 //     return $request->user();
 // });
 
-Route::resource('/productscontacts', ContactsController::class);
+Route::resource('/contacts', ContactsController::class);
