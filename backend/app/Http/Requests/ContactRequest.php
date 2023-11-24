@@ -46,13 +46,13 @@ class ContactRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'first_name.required' => 'First name name is required',
+            'first_name.required' => 'First name is required',
             'first_name.min' => 'First name should be at least 2 characters long',
 
-            'last_name.required' => 'Last name name is required',
+            'last_name.required' => 'Last name is required',
             'last_name.min' => 'Last name should be at least 2 characters long',
 
-            'email.required' => 'Email date is required',
+            'email.required' => 'Email is required',
             'email.email' => 'Email should have a valid format',
             'email.unique' => 'A contact with the same email already exists',
 

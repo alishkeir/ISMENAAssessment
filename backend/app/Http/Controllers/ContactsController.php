@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 use App\Models\Contact;
 
@@ -21,7 +20,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        return Contact::paginate(10);
+        return Contact::paginate(3);
     }
 
     /**
