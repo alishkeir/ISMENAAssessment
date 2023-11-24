@@ -8,6 +8,11 @@ use App\Models\Contact;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Http\Requests\ContactRequest;
+
+// use App\Requests\ContactRequest;
+
+
 
 class ContactsController extends Controller
 {
@@ -16,8 +21,6 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        //
-
         return Contact::paginate(10);
     }
 
@@ -33,7 +36,7 @@ class ContactsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         DB::beginTransaction();
 
@@ -65,7 +68,7 @@ class ContactsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ContactRequest $request, string $id)
     {
 
         DB::beginTransaction();
